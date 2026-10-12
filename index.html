@@ -20,6 +20,46 @@
 .modal .buttons button{min-width:155px;padding:13px 19px;background:linear-gradient(135deg,#23122e,#15172e);border-color:#75405f}
 .modal .buttons .primary{background:linear-gradient(110deg,#f02d65,#b52e84 55%,#6547cf);border-color:#ff9aba;box-shadow:0 5px 0 #53142f,0 0 32px #ff2f7845}
 .modal .big{font-size:48px}.modal h2{margin:6px 0 8px;font-size:26px}.modal p{color:var(--muted);line-height:1.55;font-size:14px}.modal .buttons{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}.primary{background:linear-gradient(135deg,#3b8b9b,#2c6588);border-color:#76d5d2}.gold{background:linear-gradient(135deg,#9d7330,#775321);border-color:#e5b85b}.footer{text-align:center;color:#7f94bd;font-size:11px;margin:12px 0 2px}@media(max-width:650px){body{padding:8px}.below{grid-template-columns:1fr}.tag{display:none}.panel{padding:11px}.hud{gap:6px}.stat{font-size:12px;padding:6px 8px}.touch button{width:54px;height:52px}.touch button.action{width:66px}}@media(min-width:800px){.touch{max-width:480px;margin:12px auto 0}}
+
+/* V7 visual polish: cleaner HUD, richer depth, crisp controls */
+:root{--night:#060b18;--panel:#101a30;--panel2:#182642;--line:#344b72;--gold:#ffd77a;--mint:#75f0d1;--white:#f4f7ff;--muted:#a8b5cc;--pink:#ff789b}
+html,body{background:radial-gradient(ellipse at 50% -10%,#26365b 0%,#0b1223 48%,#050812 100%);color:var(--white)}
+body{padding:clamp(8px,2vw,22px)}
+.shell{width:min(100%,1180px)}
+header{margin-bottom:16px}
+.logo{width:52px;height:52px;border-radius:16px;background:linear-gradient(145deg,#3d5f91,#111c32);border:1px solid #8ba8d2;box-shadow:0 8px 28px #0008,inset 0 1px #ffffff2a}
+.brand h1{font-weight:850;letter-spacing:-.65px;text-shadow:0 2px 18px #9ab8ff2a}
+.brand p{letter-spacing:.02em}
+.tag{background:#102d2b;border-color:#3c9d8c;color:#8bf4d8;box-shadow:inset 0 1px #ffffff0c}
+.gamebox{border:1px solid #6d82aa;border-radius:22px;background:#080e1c;box-shadow:0 24px 70px #0009,0 0 0 1px #ffffff08,inset 0 1px #ffffff12}
+.hud{padding:12px;background:linear-gradient(180deg,#17243b,#0c1425);border-bottom:1px solid #405474;gap:8px}
+.stat{background:linear-gradient(180deg,#1d2e4b,#121e33);border:1px solid #435b7f;border-radius:10px;box-shadow:inset 0 1px #ffffff0c;font-variant-numeric:tabular-nums}
+.stat strong{color:#ffe09a}
+.hud button{background:linear-gradient(180deg,#344f78,#1a2c49);border-color:#627da5;box-shadow:inset 0 1px #ffffff1c,0 3px 0 #060b14}
+.hud button:hover{filter:brightness(1.15)}
+canvas{filter:saturate(1.13) contrast(1.055);background:#090d1b}
+.keyguide{top:68px;right:14px;border:1px solid #e07a9b;background:linear-gradient(145deg,#160f20ed,#090d19ed);box-shadow:0 10px 35px #0009,inset 0 1px #ffffff12;border-radius:14px}
+.keyguide h3{color:#ffb0c5}
+.keyrow b{background:#312039;border-color:#8c527b;box-shadow:inset 0 1px #ffffff12}
+.below{gap:14px;margin-top:14px}
+.panel{background:linear-gradient(145deg,#16233b,#0c1425);border:1px solid #354a6a;border-radius:18px;box-shadow:0 12px 30px #0003,inset 0 1px #ffffff08}
+.panel h2{font-size:15px;letter-spacing:.02em;color:#f4f6ff}
+.panel p{color:#bac6dc}
+.key{background:#202f49;border-color:#64799a;box-shadow:inset 0 1px #ffffff12}
+.touch{margin-top:16px;gap:14px}
+.touchgroup{gap:10px}
+.touch button{border-radius:16px;border:1px solid #607aa3;background:linear-gradient(180deg,#314c73,#192a43);box-shadow:0 5px 0 #060b14,inset 0 1px #ffffff24;transition:transform .12s,filter .12s}
+.touch button:active{transform:translateY(3px);box-shadow:0 2px 0 #060b14}
+.touch button.action{background:linear-gradient(180deg,#257f80,#145154);border-color:#6ee0d4}
+.touch button.jump{background:linear-gradient(180deg,#7555a0,#3a285c);border-color:#c0a0e8}
+button{transition:filter .14s,transform .14s,box-shadow .14s}
+button:hover{filter:brightness(1.1)}
+.overlay{backdrop-filter:blur(9px);background:radial-gradient(ellipse at 50% 12%,#3a2865e8,#080b18f5 62%,#02040bf7)}
+.modal{border-color:#8b8dc2;background:linear-gradient(150deg,#1d2440fa,#0b1121fa 62%,#21172ff9);box-shadow:0 0 0 1px #ffffff12,0 28px 100px #000e,0 0 70px #7552bd24}
+.modal:before{background:radial-gradient(ellipse at 50% 0%,#c77cff25,transparent 52%),linear-gradient(120deg,transparent 30%,#ffffff06 50%,transparent 70%)}
+@media(max-width:620px){body{padding:7px}.shell{width:100%}header{gap:8px}.logo{width:42px;height:42px;font-size:24px}.brand p{font-size:10px}.tag{font-size:10px;padding:6px 8px}.gamebox{border-radius:15px}.hud{padding:8px;gap:6px}.stat{font-size:11px;padding:6px 8px}.hud button{font-size:11px;padding:7px 9px}.keyguide{width:138px;top:56px;right:7px;padding:7px 8px;opacity:.93}.keyguide h3{font-size:10px}.keyrow{font-size:9px}.below{grid-template-columns:1fr;gap:9px;margin-top:10px}.panel{padding:11px}.touch{gap:7px;margin-top:11px}.touchgroup{gap:6px}.touch button{width:48px;height:48px;border-radius:13px;font-size:20px}.touch button.action{width:58px;font-size:11px}.modal{border-radius:21px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
